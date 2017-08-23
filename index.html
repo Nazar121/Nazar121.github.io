@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Burban Nazar - Front-end Developer">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="Front-end Developer">
+    <meta property="og:site_name" content="Портфоліо">
+    <meta property="article:author" content="Burban Nazar">
+    <title>Портфоліо</title>
+    <link rel="stylesheet" href="src/css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/borderAnimate.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.jpg">
+</head>
+<body>
+    
+    <div class="wrapper" id="wrapper">
+        
+        <!--Хедер-->
+        <header class="header parallax-window" data-parallax="scroll" data-speed="0.2" data-image-src="src/img/bgHeader.jpg">
+            <div class="header__overlay"></div>
+            <a href="#portfolio" class="header__scroll">
+                <i class="fa fa-angle-down fa-2x"></i>
+            </a>
+            <div class="header__info">
+                <h1 class="info__autor">
+                    Burban Nazar
+                </h1>
+                <h3 class="info__profession">
+                    Front-end Developer
+                </h3>
+            </div>
+        </header>
+        
+        <!--Портфоліо-->
+        <section class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <h3 class="portfolio__title">Портфоліо</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Контакти-->
+        <section class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="contact__title">Контакти</div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="contact__information">
+                            <div class="information__data">
+                                <div class="data__item">
+                                    <div class="item__text">Email</div>
+                                    <div>BurbaNazar98@gmail.com</div>
+                                </div>
+                                <div class="data__item">
+                                    <div class="item__text">Phone</div> 
+                                    <div>+380634125667</div>
+                                </div>
+                                <div class="data__item">
+                                    <div class="item__text">Соціальні мережі</div> 
+                                    <div class="item__liks">
+                                        <a href="https://github.com/Nazar121" target="_blank" class="links__item links__item--git"><i class="fa fa-git-square" aria-hidden="true"></i></a>
+                                        <a href="https://www.linkedin.com/in/nazar-burban-6b3a58141/" target="_blank" class="links__item links__item--in"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                                        <a href="https://www.facebook.com/profile.php?id=100008439545179" target="_blank" class="links__item links__item--fa"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!--Футер-->
+        <footer class="footer">
+            <div class="footer__text">
+                Copyright &copy; 2017 Burban Nazar.
+            </div>
+        </footer>
+        
+        <!--На гору-->
+        <a href="#wrapper" class="toUp">
+            <div><i class="fa fa-angle-up"></i></div>
+        </a>
+        
+        <!--Модальне для проектів в портфоліо-->
+        <div class="modal fade modalWindow" id="overlay__modal">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal">
+                            <i class="fa fa-close"></i>
+                        </button>
+                        <h4 class="modal-title modalWindow__title">Modal window</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modalWindow__project">
+                            <div class="project__img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="project__info">
+                                <h3 class="info__title">Опис</h3>
+                                <div class="info__adaptive"></div>
+                                <div class="info__tehnology"></div>
+                                <a href="" target="_blank" class="info__show draw meet">Переглянути роботу</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!--<button class="btn btn-danger" data-dismiss="modal">Exit</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="src/js/jquery-3.1.0.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" defer></script>
+    <script src="src/js/bootstrap.js" defer></script>
+    <script src="src/js/parallax.min.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.wrap {
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+
+.timeline {
+/*    background: green;*/
+  margin-left: 0%;
+  width: 100%;
+  
+  white-space: nowrap;
+  
+  transition: margin-left 0.75s ease;
+}
+
+.timeline-panel {
+  display: inline-block;
+  width: 100%;
+    height: auto;
+/*    background: red;*/
+}
+
+.timeline-item {
+  width: 100%;
+  margin: 0 auto;
+/*    background: yellow;*/
+    display: flex;
+    justify-content: flex-start;
+}
+
+.item__left {
+    width: 62%;
+/*    background: blue;*/
+}
+
+.left__title {
+    margin: 74px 0 0 0;
+    color: black;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+    overflow: hidden;
+}
+
+.left__subtitle {
+    margin: 20px 0;
+    color: #313841;
+    font-size: 20px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.left__desc {
+    color: #555555;
+    font-size: 16px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.left__ico {
+    margin: 0;
+    text-align: left;
+}
+
+.left__ico i {
+    font-size: 42px;
+    color: black;
+    margin: 0 40px 0 0;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.left__icons i:last-child {
+    margin: 0;
+}
+
+.fa-apple:hover {
+    color: rgb(102,102,102);
+}
+
+.fa-android:hover {
+    color: rgb(153,204,0);
+}
+
+.fa-windows:hover {
+    color: rgb(1,120,214);
+}
+
+.tab-box {
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.tab {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 4px;
+  position: relative;
+    top: -40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  
+  transition: background 0.75s ease;
+}
+
+.tab:hover {
+  background: rgba(190, 190, 190, 0.25);
+}
+
+.tab-active, .tab-active:hover {
+  background: #fff;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    
+    .item__left {
+        width: 70%;
+/*        background: red;*/
+    }
+    
+    .left__title {
+    margin: 50px 0 0 0;
+    }
+    
+    .item__right img {
+        width: 270px;
+/*        background: blue;*/
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .item__left {
+        width: 100%;
+/*        background: red;*/
+    }
+    
+    .left__title {
+    margin: 0 0 0 0;
+    }
+    
+    .left__title, .left__subtitle, .left__desc, .left__ico {
+        text-align: center;
+    }
+    
+    .item__right  {
+        display: none;
+    }
+    
+}

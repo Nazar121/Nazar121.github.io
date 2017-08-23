@@ -1,0 +1,144 @@
+/*---slider---*/
+.content__slider {
+    width: 100%;
+    height: 384px;
+    margin: 0 auto;
+/*    background: green;*/
+    overflow: hidden;
+    position: relative;
+    clear: both;
+}
+
+.nav-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 170px;
+}
+
+.nav {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 2;
+    border-bottom: 3px solid #19f5e8;
+    background: #162433;
+    opacity: 0.8;
+    transition: 0.5s;
+    color: white;
+    font-size: 48px;
+    cursor: pointer;
+    transition: background 0.75s ease;
+}
+.img {
+    width: 100%;
+    height: 384px;
+    background: url(../img/about__sliderIcon.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+
+.nav:hover {
+    background: #162433;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.nav-prev {
+    left: 20px;
+}
+
+.nav-next {
+    right: 20px;
+}
+
+.nav-prev::before {
+    content: '\2039';
+    margin: auto;
+    line-height: 46px;
+}
+
+.nav-next::before {
+    content: '\203a';
+    margin: auto;
+    line-height: 46px;
+}
+
+.nav-inactive {
+    opacity: 0.5;
+}
+
+.timeline {
+    margin-left: 0%;
+    width: 100%;
+    height: 384px;
+    white-space: nowrap;
+    color: #8B4726;
+    text-align: center;
+    transition: margin-left 0.75s ease;
+}
+
+.timeline-panel {
+    display: inline-block;
+    width: 100%;
+}
+
+.timeline-item {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tab-box {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    display: none;
+}
+
+.tab {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: white;
+    transition: background 0.75s ease;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background: #19f5e8;
+}
+
+.tab-active,
+.tab-active:hover {
+    background: #19f5e8;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    
+    .content__slider, .img1, .img2, .img3 {
+        height: 350px;
+    }
+    
+    .nav-box {
+        top: 150px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+    .content__slider, .img1, .img2, .img3 {
+        height: 350px;
+    }
+
+    .nav-box {
+        top: 150px;
+    }
+    
+}
