@@ -28,6 +28,14 @@ $(window).on('scroll', ()=>{
 // Портфоліо
 let portfolio = [
     {
+        name: 'Golden',
+        url: 'https://nazar121.github.io/projects/golden/index.html',
+        class: 'golden',
+        img: 'src/img/portfolio__project4.jpg',
+        skills: ['JavaScript','jQuery','Gulp','npm','Bootstrap4','HTML5','CSS3','SASS/SCSS'],
+        adaptive: true
+    },
+    {
         name: 'BWE',
         url: 'https://nazar121.github.io/projects/bwe/index.html',
         class: 'bwe',

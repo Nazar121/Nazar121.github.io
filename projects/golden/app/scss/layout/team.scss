@@ -1,0 +1,80 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/classes';
+
+// Team
+.team {
+    @extend .sectionPadding;
+    background: $bg-grey;
+    color: $grey;
+    text-align: center;
+    overflow:hidden; 
+}
+
+.friend {
+    margin-bottom: 30px;
+    .friend__img {
+        display: inline-block;
+        margin: 0 auto;
+        border-radius: 50%;
+        overflow: hidden;
+        &>img {
+            display: block;
+            margin: 0 auto;
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+    }
+    .friend__name {
+        color: $title-color;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    .friend__profession {
+        margin: 0 0 10px 0;
+    }
+    .friend__socials {
+        .social {
+            display: inline-table;
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: rgb(34, 34, 34);
+            color: rgb(251, 251, 251);
+            cursor: pointer;
+            text-decoration: none;
+            @include transition(0.4s);
+            &:last-child {
+                margin-right: 0;
+            }
+            i {
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+                font-size: 20px;
+            }
+            &:hover {
+                transform: scale(1.15);
+            }
+            &:hover .fa-twitter {
+                background: rgb(50, 205, 253);
+            }
+            &:hover .fa-facebook{
+                background: rgb(59, 89, 152);
+            }
+            &:hover .fa-pinterest-p{
+                background: rgb(234, 66, 53);
+            }
+        }
+    }
+}
+
+.team__desc {
+    margin-top: 30px;
+    line-height: 1.5;
+}

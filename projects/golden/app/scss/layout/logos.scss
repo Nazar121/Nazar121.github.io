@@ -1,0 +1,14 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/classes';
+
+// Logos
+.logos {
+    @extend .sectionPadding;
+    background: $bg-white;
+    text-align: center;
+    overflow: hidden;
+    .logo {
+        margin: 0 25px 25px 25px;
+    }
+}

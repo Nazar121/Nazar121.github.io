@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>404 Not Found</title>
+    <link rel="shortcut icon" href="404_ico.png" type="images/x-ico">
+    <link rel="stylesheet" href="dist/css/reset.min.css">
+    <link rel="stylesheet" href="dist/css/animations.min.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+        .error_bg {
+            min-height: 100vh;
+            background: url('dist/img/not_found_bg.jpeg') no-repeat;
+            background-size: cover;
+            opacity: .4;
+        }
+        
+        .error {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: rgb(110, 110, 110);
+            font-family: Helvetica, sans-serif;
+        }
+        
+        .error__status {
+            font-size: 12em;
+            font-weight: bold;
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+        }
+        .error__page {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        .error__text {
+            font-size: 22px;
+            letter-spacing: 1.7px;
+        }
+        .error_btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 15px 25px;
+            margin-top: 30px;
+            background: #fed136;
+            border-radius: 2px;
+            cursor: pointer;
+            color: rgb(110, 110, 110);
+            font-weight: bold;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+        }
+        .error_btn:hover {
+            text-decoration: none;
+            color: yellow;
+            background: black;
+        }
+        .error_btn span {
+            font-style: italic;
+            font-family: cursive;
+        }
+        
+        @media (max-width: 575px) {
+            .error {
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+                padding: 0 15px;
+            }
+            .error__status {
+                font-size: 80px;
+            }
+            .error__page {
+                font-size: 20px;
+            }
+            .error__text {
+                font-size: 18px;
+                line-height: 1.7;
+            }
+        }
+        
+        @media (min-width: 576px) and (max-width: 767px) {
+            .error {
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+                padding: 0 15px;
+            }
+            .error__status {
+                font-size: 100px;
+            }
+            .error__page {
+                font-size: 22px;
+            }
+            .error__text {
+                font-size: 20px;
+                line-height: 1.7;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991px) {
+            .error {
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+                padding: 0 15px;
+            }
+            .error__status {
+                font-size: 130px;
+            }
+            .error__page {
+                font-size: 24px;
+            }
+            .error__text {
+                font-size: 20px;
+                line-height: 1.7;
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .error {
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
+                padding: 0 15px;
+            }
+            .error__status {
+                font-size: 145px;
+            }
+            .error__page {
+                font-size: 26px;
+            }
+            .error__text {
+                font-size: 20px;
+                line-height: 1.7;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="animatedParent" data-sequence='500'>
+        <div class="error_bg animated fadeIn" data-id='1'></div>
+        <div class="error animated fadeIn" data-id='2'>
+            <div class="error__status">404</div>
+            <div class="error__page">PAGE NOT FOUND</div>
+            <div class="error__text">We apologize, this job is temporarily absent.</div>
+            <a href="index.html" class="error_btn">Go to <span>"golden"</span> site</a>
+        </div>
+   </div>
+    
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="dist/js/css3-animate-it.min.js"></script>
+</body>
+</html>

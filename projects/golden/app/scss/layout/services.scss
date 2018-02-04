@@ -1,0 +1,54 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/classes';
+
+/* Services */
+.services {
+    @extend .sectionPadding;
+    background: $bg-white;
+    text-align: center;
+    overflow: hidden;
+    
+    .services__item {
+        
+        .item__img {
+            display: block;
+            width: 75px;
+            height: 75px;
+            margin: 0 auto;
+            background: url('../../dist/img/services_img1.png');
+            background-size: cover;
+        }
+        
+        .item__title {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .item__desc {
+            color: $grey;
+            line-height: 25px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .services {
+        .services__item {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .item__title {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 15px 0;
+            }
+
+            .item__desc {
+                font-size: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/classes';
+
+// Contact Us
+.contactUs {
+    @extend .sectionPadding;
+    background: url('../../dist/img/contactUs_bg.jpg') no-repeat;
+    background-size: cover;
+    text-align: center;
+    overflow: hidden;
+    .title--white {
+        color: white;
+    }
+}
+
+.form {
+    input {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    textarea {
+        min-height: 200px;
+        height: 100% - 8;
+        resize: none;
+    }
+    
+    *::placeholder {
+        color: $grey;
+        font-weight: 600;
+    }
+    
+    button {
+        cursor: pointer;
+        padding: 20px 30px;
+        margin: 15px 0 0 0;
+        &:disabled {}
+    }
+}
+
+@media (max-width: 575px) {
+    .form {
+         textarea {
+            min-height: 150px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}
