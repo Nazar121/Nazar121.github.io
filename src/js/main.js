@@ -33,7 +33,8 @@ let portfolio = [
         class: 'golden',
         img: 'src/img/portfolio__project4.jpg',
         skills: ['JavaScript','jQuery','Gulp','npm','Bootstrap4','HTML5','CSS3','SASS/SCSS'],
-        adaptive: true
+        adaptive: true,
+        github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/golden'
     },
     {
         name: 'BWE',
@@ -41,7 +42,8 @@ let portfolio = [
         class: 'bwe',
         img: 'src/img/portfolio__project1.jpg',
         skills: ['HTML5','CSS3','LESS','Bootstrap3','JavaScript','jQuery'],
-        adaptive: true
+        adaptive: true,
+        github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/bwe'
     },
     {
         name: 'UDG',
@@ -49,7 +51,8 @@ let portfolio = [
         class: 'udg',
         img: 'src/img/portfolio__project2.jpg',
         skills: ['HTML5','CSS3','LESS','Bootstrap3','JavaScript','jQuery'],
-        adaptive: true
+        adaptive: true,
+        github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/udg'
     },
     {
         name: 'Tinyone',
@@ -57,7 +60,8 @@ let portfolio = [
         class: 'tinyone',
         img: 'src/img/portfolio__project3.jpg',
         skills: ['HTML5','CSS3','LESS','Bootstrap3','JavaScript','jQuery'],
-        adaptive: true
+        adaptive: true,
+        github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/tinyone'
     }
 ];
 
@@ -111,6 +115,9 @@ function project(){
     
     // записую фото проекта
     $('.project__img img').attr('src',portfolio[index].img);
+    
+    // силка на GitHyb
+    $('.info__github').html(`<span>GitHub</span>: <a href="${portfolio[index].github}" target="_blank">${portfolio[index].github}</a>`);
     
     // записую адаптивний проект так/ні
     if (portfolio[index].adaptive){
