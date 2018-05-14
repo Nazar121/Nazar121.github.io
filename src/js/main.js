@@ -15,7 +15,7 @@ navigationScroll('a[href="#portfolio"]');
 
 
 // Скролл
-$(window).on('scroll', ()=>{
+$(window).on('scroll', function (event) {
 //    console.log($(this).scrollTop());
     if($(this).scrollTop() >= 61){
         $('.toUp').css('opacity',1);
@@ -25,14 +25,86 @@ $(window).on('scroll', ()=>{
 });
 
 
+const technologies = {
+    js: {
+        name: 'JavaScript',
+        img: 'dist/img/technologies/js.svg',
+    },
+    ts: {
+        name: 'TypeScript',
+        img: 'dist/img/technologies/ts.svg',
+    },
+    angular: {
+        name: 'Angular5',
+        img: 'dist/img/technologies/angular.svg',
+    },
+    redux: {
+        name: 'REDUX',
+        img: 'dist/img/technologies/redux.svg',
+    },
+    firebase: {
+        name: 'Firebase',
+        img: 'dist/img/technologies/firebase.svg',
+    },
+    git: {
+        name: 'Git',
+        img: 'dist/img/technologies/git.svg',
+    },
+    github: {
+        name: 'GitHub',
+        img: 'dist/img/technologies/github.svg',
+    },
+    gulp: {
+        name: 'Gulp',
+        img: 'dist/img/technologies/gulp.svg',
+    },
+    npm: {
+        name: 'npm',
+        img: 'dist/img/technologies/npm.svg',
+    },
+    jquery: {
+        name: 'jQuery',
+        img: 'dist/img/technologies/jquery.svg',
+    },
+    bootstrap: {
+        name: 'Bootstrap4',
+        img: 'dist/img/technologies/bootstrap.svg',
+    },
+    css: {
+        name: 'CSS3',
+        img: 'dist/img/technologies/css.svg',
+    },
+    html: {
+        name: 'HTML5',
+        img: 'dist/img/technologies/html.svg',
+    },
+    less: {
+        name: 'LESS',
+        img: 'dist/img/technologies/less.svg',
+    },
+    sass: {
+        name: 'SASS',
+        img: 'dist/img/technologies/sass.svg',
+    }
+};
+
 // Портфоліо
 let portfolio = [
+    {
+        name: 'Weather',
+        url: 'https://weather-com.firebaseapp.com',
+        class: 'weather',
+        img: 'dist/img/portfolio__project4.jpg',
+        technologies: [technologies.angular, technologies.redux, technologies.ts, technologies.firebase, technologies.npm, technologies.bootstrap, technologies.html, technologies.sass],
+        adaptive: true,
+        github: 'https://github.com/Nazar121/app-weather'
+    },
     {
         name: 'Golden',
         url: 'https://nazar121.github.io/projects/golden/index.html',
         class: 'golden',
-        img: 'src/img/portfolio__project4.jpg',
-        skills: ['JavaScript','jQuery','Gulp','npm','Bootstrap4','HTML5','CSS3','SASS/SCSS'],
+        img: 'dist/img/portfolio__project4.jpg',
+        technologies: [technologies.js, technologies.jquery, technologies.npm, technologies.gulp, technologies.bootstrap, technologies.html, technologies.css, technologies.sass],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/golden'
     },
@@ -40,8 +112,8 @@ let portfolio = [
         name: 'BWE',
         url: 'https://nazar121.github.io/projects/bwe/index.html',
         class: 'bwe',
-        img: 'src/img/portfolio__project1.jpg',
-        skills: ['HTML5','CSS3','LESS','Bootstrap3','JavaScript','jQuery'],
+        img: 'dist/img/portfolio__project1.jpg',
+        technologies: [technologies.js, technologies.jquery, technologies.bootstrap, technologies.html, technologies.css, technologies.less],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/bwe'
     },
@@ -49,8 +121,8 @@ let portfolio = [
         name: 'UDG',
         url: 'https://nazar121.github.io/projects/udg/index.html',
         class: 'udg',
-        img: 'src/img/portfolio__project2.jpg',
-        skills: ['HTML5','CSS3','LESS','Bootstrap3','JavaScript','jQuery'],
+        img: 'dist/img/portfolio__project2.jpg',
+        technologies: [technologies.js, technologies.jquery, technologies.bootstrap, technologies.html, technologies.css, technologies.less],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/udg'
     },
@@ -58,8 +130,8 @@ let portfolio = [
         name: 'Tinyone',
         url: 'https://nazar121.github.io/projects/tinyone/index.html',
         class: 'tinyone',
-        img: 'src/img/portfolio__project3.jpg',
-        skills: ['HTML5','CSS3','LESS','Bootstrap3','JavaScript','jQuery'],
+        img: 'dist/img/portfolio__project3.jpg',
+        technologies: [technologies.js, technologies.jquery, technologies.bootstrap, technologies.html, technologies.css, technologies.less],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/tinyone'
     }
@@ -73,7 +145,7 @@ function createPortfolio(){
             <div class="portfolio__project">
                 <img src="${obj.img}" class="project__img" alt="${obj.name}">
                 <div class="project__overlay">
-                    <div class="${obj.class} overlay__text draw meet" data-toggle="modal" data-target="#overlay__modal">Переглянути роботу</div>
+                    <div class="${obj.class} overlay__text draw meet" data-toggle="modal" data-target="#overlay__modal">See work</div>
                 </div>
             </div>
         </div>`;
@@ -111,31 +183,27 @@ function project(){
     let result = '';
     
     // записую назву проекта
-    $('.modalWindow__title').text(`Проект ${portfolio[index].name}`);
+    $('.modalWindow__title').text(`Project ${portfolio[index].name}`);
     
     // записую фото проекта
     $('.project__img img').attr('src',portfolio[index].img);
     
     // силка на GitHyb
-    $('.info__github').html(`<span>GitHub</span>: <a href="${portfolio[index].github}" target="_blank">${portfolio[index].github}</a>`);
+    $('.info__github').html(`<span>GitHub</span>: <a href="${portfolio[index].github}" target="_blank">Link to this project.</a>`);
     
     // записую адаптивний проект так/ні
     if (portfolio[index].adaptive){
-        $('.info__adaptive').html(`<span>Адаптивний проект</span>: Так.`);
+        $('.info__adaptive').html(`<span>Responsive design</span>: Yes.`);
     }else{
-        $('.info__adaptive').html(`<span>Адаптивний проект</span>: Ні.`);
+        $('.info__adaptive').html(`<span>Responsive design</span>: No.`);
     }
     
     // записую технології які використовував
-    for(let i=0; i<portfolio[index].skills.length; i++){
-        if(i == portfolio[index].skills.length-1){
-            result += `<p>${portfolio[index].skills[i]}</p>`;
-            break;
-        }
-        result += `<p>${portfolio[index].skills[i]},</p>`;
-    }
+    portfolio[index].technologies.map(obj => {
+        result += `<img src="${obj.img}" alt="${obj.name}" class="img"/>`;
+    });
     $('.info__tehnology').empty();
-    $('.info__tehnology').append(`<span>Використані технології</span>: ${result}.`);
+    $('.info__tehnology').append(`<span>Used technologies</span>: ${result}`);
     
     // Записую URL адресу для проекта 
     $('.info__show').attr('href',portfolio[index].url);
