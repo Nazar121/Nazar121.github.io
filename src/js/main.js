@@ -66,7 +66,11 @@ const technologies = {
         name: 'jQuery',
         img: 'dist/img/technologies/jquery.svg',
     },
-    bootstrap: {
+    bootstrap3: {
+        name: 'Bootstrap3',
+        img: 'dist/img/technologies/bootstrap.svg',
+    },
+    bootstrap4: {
         name: 'Bootstrap4',
         img: 'dist/img/technologies/bootstrap.svg',
     },
@@ -95,7 +99,7 @@ let portfolio = [
         url: 'https://weather-com.firebaseapp.com',
         class: 'weather',
         img: 'dist/img/portfolio__project4.jpg',
-        technologies: [technologies.angular, technologies.redux, technologies.ts, technologies.firebase, technologies.git, technologies.npm, technologies.bootstrap, technologies.html, technologies.css, technologies.sass],
+        technologies: [technologies.angular, technologies.redux, technologies.ts, technologies.firebase, technologies.git, technologies.npm, technologies.bootstrap4, technologies.html, technologies.css, technologies.sass],
         adaptive: true,
         github: 'https://github.com/Nazar121/app-weather'
     },
@@ -104,7 +108,7 @@ let portfolio = [
         url: 'https://nazar121.github.io/projects/golden/index.html',
         class: 'golden',
         img: 'dist/img/portfolio__project4.jpg',
-        technologies: [technologies.js, technologies.jquery, technologies.npm, technologies.gulp, technologies.bootstrap, technologies.html, technologies.css, technologies.sass],
+        technologies: [technologies.js, technologies.jquery, technologies.npm, technologies.git, technologies.gulp, technologies.bootstrap4, technologies.html, technologies.css, technologies.sass],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/golden'
     },
@@ -113,7 +117,7 @@ let portfolio = [
         url: 'https://nazar121.github.io/projects/bwe/index.html',
         class: 'bwe',
         img: 'dist/img/portfolio__project1.jpg',
-        technologies: [technologies.js, technologies.jquery, technologies.bootstrap, technologies.html, technologies.css, technologies.less],
+        technologies: [technologies.js, technologies.jquery, technologies.bootstrap3, technologies.html, technologies.css, technologies.less],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/bwe'
     },
@@ -122,7 +126,7 @@ let portfolio = [
         url: 'https://nazar121.github.io/projects/udg/index.html',
         class: 'udg',
         img: 'dist/img/portfolio__project2.jpg',
-        technologies: [technologies.js, technologies.jquery, technologies.bootstrap, technologies.html, technologies.css, technologies.less],
+        technologies: [technologies.js, technologies.jquery, technologies.bootstrap3, technologies.html, technologies.css, technologies.less],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/udg'
     },
@@ -131,7 +135,7 @@ let portfolio = [
         url: 'https://nazar121.github.io/projects/tinyone/index.html',
         class: 'tinyone',
         img: 'dist/img/portfolio__project3.jpg',
-        technologies: [technologies.js, technologies.jquery, technologies.bootstrap, technologies.html, technologies.css, technologies.less],
+        technologies: [technologies.js, technologies.jquery, technologies.bootstrap3, technologies.html, technologies.css, technologies.less],
         adaptive: true,
         github: 'https://github.com/Nazar121/Nazar121.github.io/tree/master/projects/tinyone'
     }
