@@ -98,7 +98,7 @@ let portfolio = [
         name: 'Weather',
         url: 'https://weather-com.firebaseapp.com',
         class: 'weather',
-        img: 'dist/img/portfolio__project4.jpg',
+        img: 'dist/img/portfolio__project5.jpg',
         technologies: [technologies.angular, technologies.redux, technologies.ts, technologies.firebase, technologies.git, technologies.npm, technologies.bootstrap4, technologies.html, technologies.css, technologies.sass],
         adaptive: true,
         github: 'https://github.com/Nazar121/app-weather'
@@ -187,7 +187,7 @@ function project(){
     let result = '';
     
     // записую назву проекта
-    $('.modalWindow__title').text(`Project ${portfolio[index].name}`);
+    $('.modalWindow__title').text(`Project "${portfolio[index].name}"`);
     
     // записую фото проекта
     $('.project__img img').attr('src',portfolio[index].img);
